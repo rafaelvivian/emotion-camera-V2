@@ -1,10 +1,10 @@
 const webcam = document.querySelector('#video')
 
 Promise.all([
-  faceapi.nets.tinyFaceDetector.loadFromUri('/models'), // Detecção facial
-  faceapi.nets.faceLandmark68Net.loadFromUri('/models'), // Pontos de referência na face
-  faceapi.nets.faceRecognitionNet.loadFromUri('/models'), // Localização da face no vídeo
-  faceapi.nets.faceExpressionNet.loadFromUri('/models') // Emoção
+  faceapi.nets.tinyFaceDetector.loadFromUri('./models'), // Detecção facial
+  faceapi.nets.faceLandmark68Net.loadFromUri('./models'), // Pontos de referência na face
+  faceapi.nets.faceRecognitionNet.loadFromUri('./models'), // Localização da face no vídeo
+  faceapi.nets.faceExpressionNet.loadFromUri('./models') // Emoção
 ]).then(startVideo)
 
 async function startVideo() {
